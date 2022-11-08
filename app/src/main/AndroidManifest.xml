@@ -14,8 +14,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateActivity"
+            android:name=".AddExpense"
             android:exported="false" />
+        <activity
+            android:name=".ExpenseActivity"
+            android:exported="false"
+            android:label="Expense" />
+        <activity
+            android:name=".UpdateActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddActivity"
             android:exported="false"

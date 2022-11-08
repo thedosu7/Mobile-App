@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:padding="12dp">
-
 
             <TextView
                 android:id="@+id/trip_id_txt"
@@ -29,9 +22,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:text="1"
-                android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,27 +33,27 @@
                 android:id="@+id/trip_name_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Trip"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/trip_id_txt" />
+                android:layout_marginStart="16dp"
+                android:text="Trip Name"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/trip_id_txt"
+                app:layout_constraintTop_toTopOf="@+id/trip_id_txt" />
 
             <TextView
                 android:id="@+id/trip_destination_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Destination"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/trip_name_txt" />
+                android:text="Trip destination"
+                app:layout_constraintStart_toStartOf="@+id/trip_name_txt"
+                app:layout_constraintTop_toBottomOf="@+id/trip_name_txt" />
 
             <TextView
                 android:id="@+id/trip_date_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:text="Date"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="-160dp"
+                android:text="Trip Date"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/trip_destination_txt"
                 app:layout_constraintTop_toTopOf="@+id/trip_destination_txt" />
 
@@ -68,9 +61,9 @@
                 android:id="@+id/trip_require_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:text="Require"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="-70dp"
+                android:text="Assessment"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/trip_date_txt"
                 app:layout_constraintTop_toTopOf="@+id/trip_date_txt" />
 
@@ -78,11 +71,11 @@
                 android:id="@+id/trip_description_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:text="Description"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/trip_require_txt"
                 app:layout_constraintTop_toTopOf="@+id/trip_require_txt" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

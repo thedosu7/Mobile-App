@@ -4,10 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.244" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/drawable/ic_delete.xml" value="0.181" />
         <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.244" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/drawable/search.xml" value="0.181" />
         <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_add.xml" value="0.25" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_add_expense.xml" value="0.23802083333333332" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_expense.xml" value="0.23802083333333332" />
         <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_row.xml" value="0.23802083333333332" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/activity_update.xml" value="0.23802083333333332" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/add_expense.xml" value="0.23697916666666666" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/expense_main.xml" value="0.23697916666666666" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/expense_row.xml" value="0.264" />
         <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/row.xml" value="0.264" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/layout/row_table.xml" value="0.4" />
+        <entry key="..\:/PhamHiepDuc/MyApplication/app/src/main/res/menu/menu.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>

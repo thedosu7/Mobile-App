@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ExpenseActivity">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_trip"
+        android:id="@+id/add_expense_trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -21,7 +21,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewExpense"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingTop="?attr/actionBarSize"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/empty"
+        android:id="@+id/empty_expense"
         android:layout_width="176dp"
         android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
@@ -45,7 +45,7 @@
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+id/no_data"
+        android:id="@+id/no_data_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -55,5 +55,5 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/empty" />
+        app:layout_constraintTop_toBottomOf="@+id/empty_expense" />
 </androidx.constraintlayout.widget.ConstraintLayout>
