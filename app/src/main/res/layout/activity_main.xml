@@ -14,11 +14,21 @@
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="52dp"
         android:clickable="true"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_24"
-        android:contentDescription="TODO" />
-
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/search_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="52dp"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -36,24 +46,26 @@
         android:id="@+id/empty"
         android:layout_width="176dp"
         android:layout_height="218dp"
+        android:alpha="0.1"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/recyclerView"
         app:layout_constraintTop_toTopOf="@+id/recyclerView"
-        app:srcCompat="@drawable/ic_noun_empty_5133250"
-        android:alpha="0.1"
-        android:visibility="gone"/>
+        app:srcCompat="@drawable/ic_noun_empty_5133250" />
 
     <TextView
         android:id="@+id/no_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:alpha="0.4"
         android:text="No Trips"
         android:textSize="30dp"
-        android:alpha="0.4"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/empty" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

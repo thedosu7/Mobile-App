@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,6 +25,8 @@ public class ExpenseActivity extends AppCompatActivity {
     MyDatabaseHelper myDatabaseHelper;
     ArrayList<String> expense_id, expense_type, expense_amount, expense_date;
     ExpenseAdapter expenseAdapter;
+    ImageView empty_image;
+    TextView no_data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,8 @@ public class ExpenseActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewExpense);
         add_expense = findViewById(R.id.add_expense_trip);
         id_trip = getIntent().getStringExtra("id_trip");
+        empty_image = findViewById(R.id.empty_expense);
+        no_data = findViewById(R.id.no_data_expense);
         add_expense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,14 +57,17 @@ public class ExpenseActivity extends AppCompatActivity {
     void DisplayExpense(){
         Cursor cursor = myDatabaseHelper.readExpenseData();
         if(cursor.getCount() == 0){
-            Toast.makeText(this, "No expense", Toast.LENGTH_SHORT).show();
+            empty_image.setVisibility(View.VISIBLE);
+            no_data.setVisibility(View.VISIBLE);
         }else{
             while (cursor.moveToNext()){
                 expense_id.add(cursor.getString(0));
-                expense_type.add(cursor.getString(1));
-                expense_amount.add(cursor.getString(2));
-                expense_date.add(cursor.getString(3));
+                expense_date.add(cursor.getString(1));
+                expense_type.add(cursor.getString(2));
+                expense_amount.add(cursor.getString(3));
             }
+            empty_image.setVisibility(View.GONE);
+            no_data.setVisibility(View.GONE);
         }
     }
 }

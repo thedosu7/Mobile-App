@@ -23,7 +23,7 @@ import java.util.Date;
         db.execSQL("CREATE TABLE ExpenseApp (ID INTEGER PRIMARY KEY AUTOINCREMENT ," +
                 "name TEXT, destination TEXT, date TEXT, require TEXT, description TEXT)");
         db.execSQL("CREATE TABLE ExpenseTable (ID1 INTEGER PRIMARY KEY AUTOINCREMENT ," +
-                "type TEXT, amount TEXT, date TEXT, trip_id INTEGER, FOREIGN KEY (trip_id) REFERENCES ExpenseApp)");
+                "type TEXT, amount TEXT, date TEXT, trip_id INTEGER, FOREIGN KEY (trip_id) REFERENCES ExpenseApp (ID))");
     }
 
     @Override
@@ -65,16 +65,7 @@ import java.util.Date;
 
 
     }
-    Cursor readExpenseData(){
-         String query1 = "SELECT * FROM ExpenseTable";
-         SQLiteDatabase database = this.getWritableDatabase();
 
-         Cursor cursor = null;
-         if(database!=null){
-             cursor = database.rawQuery(query1, null);
-         }
-         return cursor;
-    }
 
 
     void updateData(String row_id, String name,String  destination, String date, String require, String description  ){
@@ -121,7 +112,17 @@ import java.util.Date;
             Toast.makeText(context,"Failed", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(context,"Create trip successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"Create success", Toast.LENGTH_LONG).show();
         }
      }
+         Cursor readExpenseData(){
+             String query1 = "SELECT * FROM ExpenseTable";
+             SQLiteDatabase database = this.getWritableDatabase();
+
+             Cursor cursor = null;
+             if(database!=null){
+                 cursor = database.rawQuery(query1, null);
+             }
+             return cursor;
+         }
      }

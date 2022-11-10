@@ -29,7 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    FloatingActionButton add_trip;
+    FloatingActionButton add_trip, search_trip;
     MyDatabaseHelper myDatabaseHelper;
     ArrayList<String> trip_id, trip_name, trip_destination, trip_date, trip_require, trip_description;
     CustomAdapter customAdapter;
@@ -43,8 +43,16 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         add_trip = findViewById(R.id.add_trip);
+        search_trip = findViewById(R.id.search_trip);
         empty_image = findViewById(R.id.empty);
         no_data = findViewById(R.id.no_data);
+        search_trip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent1);
+            }
+        });
         add_trip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else{
             while(cursor.moveToNext()){
-                trip_id.add(cursor.getString(0)); //0 mean first column
+                trip_id.add(cursor.getString(0));
                 trip_name.add(cursor.getString(1));
                 trip_destination.add(cursor.getString(2));
                 trip_date.add(cursor.getString(3));
